@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla To-do</title>
+    <link rel="stylesheet" href="/style/style.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍦</text></svg>"
+    />
+  </head>
+  <body>
+    <button id="dark-mode-toggle"></button>
+    <header>
+      <h1>🍦 Vanilla To-do</h1>
+      <div class="inspirational-quote">
+        <blockquote id="inspirational-quote__content"></blockquote>
+        <figcaption id="inspirational-quote__author"></figcaption>
+      </div>
+    </header>
+    <div class="header-border"></div>
+    <main>
+      <form id="new-task-form">
+        <div class="new-task-form__input-wrapper">
+          <button id="new-task-form__emoji-button" type="button">🐮</button>
+          <div id="new-task-form__emoji-tooltip" role="tooltip"></div>
+          <input
+            id="new-task-form__input"
+            placeholder="Buy milk"
+            type="text"
+            autofocus
+          />
+        </div>
+        <button id="new-task-form__button" type="submit">Add task</button>
+      </form>
+      <div class="tasks">
+        <h2 class="tasks__headline">
+          Tasks <span class="tasks__count" id="tasks__count"></span>
+        </h2>
+        <div id="tasks__empty-state">
+          <img
+            class="tasks__empty-state-icon"
+            src="../assets/empty-state-to-do-list.svg"
+            alt="An icon of a to-do list on a clipboard"
+          />
+          <p class="tasks__empty-state-description">
+            You don't have anything on your to-do list.
+          </p>
+        </div>
+        <ul id="tasks__list"></ul>
+        <h2 id="tasks__headline-completed-tasks" class="tasks__headline">
+          Completed tasks
+          <span class="tasks__count" id="tasks__completed-count"></span>
+        </h2>
+        <ul id="tasks__completed"></ul>
+        <button id="deleteCompletedTasks">Delete all completed tasks?</button>
+      </div>
+    </main>
+    <a
+      href="https://github.com/kasperadk"
+      target="_blank"
+      rel="nofollow noopener"
+    >
+      <div class="made-by">
+        Made with ❤️<br />
+        by Kasper Andreassen
+      </div>
+    </a>
+  </body>
+</html>
